@@ -4,15 +4,16 @@
 using namespace std;
 
 void Sum(int);
+void Product(int);
 
 int main() {
 	int n;
-	int sum;
 
 	cout << "Enter a number for n:";
 	cin >> n;
 
 	Sum(n);
+	Product(n);
 
 	cin.ignore();
 	cin.get();
@@ -25,4 +26,12 @@ void Sum(int n) {
 		sum += i;
 	}
 	cout << "The sum is " << sum << "." << endl;
+}
+
+void Product(int n) {
+	int product = 1;
+	for (int i = 1; i <= n; i++) {
+		product *= i;
+	}
+	cout << "The product is " << product << "." << endl;
 }
